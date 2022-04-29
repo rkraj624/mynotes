@@ -17,7 +17,12 @@ app.use(express.json())
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/notes', require('./routes/notes'))
 
+<<<<<<< HEAD
 if(process.env.Node_ENV==='production'){
+=======
+if(process.env.NODE_ENV=='production'){
+  const path = require('path')
+>>>>>>> c403d0dc0ed8b47eeb5f513c6fee4343df30e993
 
     app.use(express.static(("client/build")))
 }
