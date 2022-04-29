@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const {DATABASE} = require('../config/key');
+const DATABASE = process.env.DATABASE
 
     mongoose.connect(DATABASE, {
         useCreateIndex:true,
