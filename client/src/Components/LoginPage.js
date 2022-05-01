@@ -19,7 +19,7 @@ const LoginPage = () => {
 
   const loginUser = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:8000/api/auth/login", {
+    const response = await fetch("http://localhost:5000/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -34,6 +34,8 @@ const LoginPage = () => {
       // Save the auth token and redirect
       localStorage.setItem("token", json.authtoken);
       navigation("/profile");
+    }else{
+      window.alert(`Invalid Credentials`)
     }
   };
 

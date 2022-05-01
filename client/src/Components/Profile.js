@@ -25,7 +25,7 @@ const Profile = () => {
 });
   const getUser = async () => {
     // API Call
-    const response = await fetch(`http://localhost:8000/api/auth/getuser`, {
+    const response = await fetch(`http://localhost:5000/api/auth/getuser`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -55,23 +55,23 @@ const Profile = () => {
       </div>
       <div className="grid grid-cols-1 px-4 ">
         <div className="fixed left-0 right-0 flex justify-center ">
-          <div className="w-5/12 mt-8 text-xl text-center bg-white shadow-custom-light rounded-2xl opacity-70">
+          <div className="w-6/12 mt-8 text-xl text-center bg-white shadow-custom-light rounded-2xl opacity-70 lg:w-5/12">
             <div className="grid grid-cols-2 px-4 mt-2">
               <div className="">
-             <p className="mx-4 my-2 text-2xl font-semibold text-left">Name</p>
-             <p className="mx-4 my-2 text-2xl font-semibold text-left">Email</p>
-             <p className="mx-4 my-2 text-2xl font-semibold text-left">Reg Number</p>
-             <p className="mx-4 my-2 text-2xl font-semibold text-left">DOB</p>
-             <p className="mx-4 my-2 text-2xl font-semibold text-left">Country</p>
-             <p className="mx-4 my-2 text-2xl font-semibold text-left">Joining Year</p>
+             <p className="mx-4 my-2 text-base font-semibold text-left lg:text-2xl">Name</p>
+             <p className="mx-4 my-2 text-base font-semibold text-left lg:text-2xl">Email</p>
+             <p className="mx-4 my-2 text-base font-semibold text-left lg:text-2xl">Reg Number</p>
+             <p className="mx-4 my-2 text-base font-semibold text-left lg:text-2xl">DOB</p>
+             <p className="mx-4 my-2 text-base font-semibold text-left lg:text-2xl">Country</p>
+             <p className="mx-4 my-2 text-base font-semibold text-left lg:text-2xl">Joining Year</p>
               </div>
               <div className="">
-             <p className="my-2 text-2xl text-left text-indigo-800 font-base">{user.name}</p>
-             <p className="my-2 text-2xl text-left text-indigo-800 font-base">{user.email}</p>
-             <p className="my-2 text-2xl text-left text-indigo-800 font-base">{user.registrationNumber}</p>
-             <p className="my-2 text-2xl text-left text-indigo-800 font-base">{user.dob}</p>
-             <p className="my-2 text-2xl text-left text-indigo-800 font-base">{user.country}</p>
-             <p className="my-2 text-2xl text-left text-indigo-800 font-base">{user.joiningYear}</p>
+             <p className="my-2 text-base font-semibold text-left text-indigo-800 lg:text-2xl">{user.name}</p>
+             <p className="my-2 text-base font-semibold text-left text-indigo-800 lg:text-2xl">{user.email}</p>
+             <p className="my-2 text-base font-semibold text-left text-indigo-800 lg:text-2xl">{user.registrationNumber}</p>
+             <p className="my-2 text-base font-semibold text-left text-indigo-800 lg:text-2xl">{user.dob}</p>
+             <p className="my-2 text-base font-semibold text-left text-indigo-800 lg:text-2xl">{user.country}</p>
+             <p className="my-2 text-base font-semibold text-left text-indigo-800 lg:text-2xl">{user.joiningYear}</p>
               </div>
              
             </div>

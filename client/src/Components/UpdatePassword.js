@@ -12,7 +12,7 @@ const UpdatePassword = () => {
   const changePassword = async ( registrationNumber,oldPassword, newPassword, confirmNewPassword) => {
     // TODO: API Call
     // API Call 
-    const response = await fetch(`http://localhost:8000/api/auth/updatepassword`, {
+    const response = await fetch(`http://localhost:5000/api/auth/updatepassword`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

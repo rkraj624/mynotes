@@ -30,17 +30,82 @@ router.post('/createuser', [
       }
      let countryCode;
 
-     if(country==="INDIA"){
-         countryCode="01"
-     } else if(country==="NEPAL"){
-         countryCode="02"
-     }else if(country === "BANGLADESH"){
-         countryCode="03";
-     }else {
-         countryCode="00"
+     if(country==="Andhra Pradesh"){
+         countryCode="AP"
+     } else if(country==="Andaman and Nicobar Islands"){
+         countryCode="AN"
+     }else if(country === "Arunachal Pradesh"){
+         countryCode="ARP";
+     }else if(country === "Assam") {
+         countryCode="AS"
+     }else if(country === "Bihar") {
+         countryCode="BI"
+     }else if(country === "Chandigarh") {
+         countryCode="CAG"
+     }else if(country === "Chhattisgarh") {
+         countryCode="CG"
+     }else if(country === "Dadar and Nagar Haveli") {
+         countryCode="DNH"
+     }else if(country === "Daman and Diu") {
+         countryCode="DD"
+     }else if(country === "Delhi") {
+         countryCode="DE"
+     }else if(country === "Lakshadweep") {
+         countryCode="LD"
+     }else if(country === "Puducherry") {
+         countryCode="PC"
+     }else if(country === "Goa") {
+         countryCode="GO"
+     }else if(country === "Gujarat") {
+         countryCode="GU"
+     }else if(country === "Haryana") {
+         countryCode="HA"
+     }else if(country === "Himachal Pradesh") {
+         countryCode="HP"
+     }else if(country === "Jammu and Kashmir") {
+         countryCode="JK"
+     }else if(country === "Jharkhand") {
+         countryCode="JH"
+     }else if(country === "Karnataka") {
+         countryCode="KAR"
+     }else if(country === "Kerala") {
+         countryCode="KE"
+     }else if(country === "Madhya Pradesh") {
+         countryCode="MP"
+     }else if(country === "Maharashtra") {
+      countryCode="MH"
+     }else if(country === "Manipur") {
+      countryCode="MN"
+     }else if(country === "Meghalaya") {
+      countryCode="MG"
+     }else if(country === "Mizoram") {
+      countryCode="MZ"
+     }else if(country === "Nagaland") {
+      countryCode="NG"
+     }else if(country === "Odisha") {
+      countryCode="OD"
+     }else if(country === "Punjab") {
+      countryCode="PJ"
+     }else if(country === "Rajasthan") {
+      countryCode="RS"
+     }else if(country === "Tamil Nadu") {
+      countryCode="TN"
+     }else if(country === "Telangana") {
+      countryCode="TG"
+     }else if(country === "Tripura") {
+      countryCode="TP"
+     }else if(country === "Uttar Pradesh") {
+      countryCode="UP"
+     }else if(country === "Uttarakhand") {
+      countryCode="UK"
+     }else if(country === "West Bengal") {
+      countryCode="WB"
+     }else{
+       countryCode="00"
      }
      
      const users = await User.find({country})
+     console.log(users);
      let helper;
      if(users.length < 10){
 
