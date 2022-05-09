@@ -25,7 +25,7 @@ const Profile = () => {
 });
   const getUser = async () => {
     // API Call
-    const response = await fetch(`http://localhost:5000/api/auth/getuser`, {
+    const response = await fetch(`https://rkrajnotes.herokuapp.com/api/auth/getuser`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
