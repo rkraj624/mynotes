@@ -4,6 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import myNotes1 from "../assets/1.jpg";
 import myNotes2 from "../assets/2.jpg";
 import myNotes3 from "../assets/3.jpg";
+import { Link } from "react-router-dom";
 const ImgSlider = () => {
   return (
     <>
@@ -14,8 +15,9 @@ const ImgSlider = () => {
         Welcome to <span className="text-indigo-600"> My Notes</span>
       </h2>
       <p className="mt-2 text-sm text-gray-500 md:text-base lg:text-left">
-      Full Stack Development ka ek brand new course leke a rha hu, full course simple aur hindi bhasa mein. Backend front-end <span className="text-indigo-600">React JS Node JS Tailwind for Style </span> agar acha lga ho toh comment krna, kosis karunga ki jaldi se full course ka tutorial <span className="text-red-600">codingKiPatsala</span> la saku.
+     This Project is based on MERN Stack, basically this is an Note taking app where an individual can take there notes and keep it safely, if they want then thye can edit and delete too which ever note they want. <span className="text-indigo-600">MERN stands for Mongo DB Express JS React JS Node JS </span>For designing, I have used Tailwind CSS.
       </p>
+      <Link to="https://github.com/rkraj624/mynotes"><span className="text-red-600"> Github Link </span> </Link>
       
     </div>
   </div>
