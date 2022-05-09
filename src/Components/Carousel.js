@@ -17,7 +17,7 @@ const ImgSlider = () => {
       <p className="mt-2 text-sm text-gray-500 md:text-base lg:text-left">
      This Project is based on MERN Stack, basically this is an Note taking app where an individual can take there notes and keep it safely, if they want then thye can edit and delete too which ever note they want. <span className="text-indigo-600">MERN stands for Mongo DB Express JS React JS Node JS </span>For designing, I have used Tailwind CSS.
       </p>
-      <Link to="https://github.com/rkraj624/mynotes"><span className="text-red-600"> Github Link </span> </Link>
+      <a href="https://github.com/rkraj624/mynotes"><span className="text-indigo-600"> Github Link </span> </a>
       
     </div>
   </div>
