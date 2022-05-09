@@ -74,7 +74,7 @@ const Signup = () => {
                           Welcome to My Notes
                         </h4>
                       </div>
-                      <form>
+                      <form onSubmit={signUp}>
                         <p className="mb-4">Please Sign Up for Making Notes</p>
                         <div className="mb-4">
                           <input
@@ -110,6 +110,7 @@ const Signup = () => {
                             value={credentials.dob}
                               onChange={onChange}
                             required
+                            min={6}
                           />
                         </div>
                         <div className="mb-4 ">
@@ -164,10 +165,10 @@ const Signup = () => {
                         <div className="pt-1 pb-1 mb-12 text-center">
                           <button
                             className="inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3 bg-indigo-600"
-                            type="button"
+                            type="submit"
                             data-mdb-ripple="true"
                             data-mdb-ripple-color="light"
-                            onClick={signUp}
+                           
                           >
                             Sign Up
                           </button>

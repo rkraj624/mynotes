@@ -72,7 +72,7 @@ const LoginPage = () => {
                           Welcome to My Notes
                         </h4>
                       </div>
-                      <form>
+                      <form onSubmit={loginUser}>
                         <p className="mb-4">Please login to your account</p>
                         <div className="mb-4">
                           <input
@@ -112,11 +112,11 @@ const LoginPage = () => {
                         <div className="flex items-center justify-between pb-6">
                           <p className="mb-0 mr-2">Don't have an account?</p>
                           <button
-                            type="button"
+                            type="submit"
                             className="inline-block px-6 py-2 text-xs font-medium leading-tight text-blue-600 uppercase transition duration-150 ease-in-out border-2 border-blue-600 rounded hover:bg-indigo-700 focus:outline-none focus:ring-0 hover:text-white"
                             data-mdb-ripple="true"
                             data-mdb-ripple-color="light"
-                            onClick={handleClick}
+                            
                           >
                             Register
                           </button>
