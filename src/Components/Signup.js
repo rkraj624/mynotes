@@ -110,7 +110,6 @@ const Signup = () => {
                             value={credentials.dob}
                               onChange={onChange}
                             required
-                            min={6}
                           />
                         </div>
                         <div className="mb-4 ">
