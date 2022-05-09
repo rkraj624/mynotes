@@ -4,7 +4,6 @@ import { Carousel } from "react-responsive-carousel";
 import myNotes1 from "../assets/1.jpg";
 import myNotes2 from "../assets/2.jpg";
 import myNotes3 from "../assets/3.jpg";
-import { Link } from "react-router-dom";
 const ImgSlider = () => {
   return (
     <>
