@@ -116,7 +116,7 @@ const LoginPage = () => {
                             className="inline-block px-6 py-2 text-xs font-medium leading-tight text-blue-600 uppercase transition duration-150 ease-in-out border-2 border-blue-600 rounded hover:bg-indigo-700 focus:outline-none focus:ring-0 hover:text-white"
                             data-mdb-ripple="true"
                             data-mdb-ripple-color="light"
-                            
+                            onClick={handleClick}
                           >
                             Register
                           </button>

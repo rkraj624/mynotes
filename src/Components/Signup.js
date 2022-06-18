@@ -35,6 +35,7 @@ const Signup = () => {
     // console.log(json);
     if (json.success) {
       // Save the auth token and redirect
+      alert("By default date of birth is Your Password in reverse order(YY-MM-DD)")
       navigate("/profile");
       localStorage.setItem("token", json.authtoken);
     } else {
@@ -111,6 +112,7 @@ const Signup = () => {
                               onChange={onChange}
                             required
                           />
+                          <div className="mx-2">Enter Your Date of Birth</div>
                         </div>
                         <div className="mb-4 ">
                           <select
