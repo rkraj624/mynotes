@@ -6,10 +6,8 @@ import Footer from './Footer'
 const Home = () => {
   return (
     <>
-    <Navbar/>
     <ImgSlider/>
     <Cards/>
-    <Footer/>
     </>
   )
 }

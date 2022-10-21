@@ -26,7 +26,7 @@ const Signup = () => {
       body: JSON.stringify({
         name: credentials.name,
         email: credentials.email,
-        dob: credentials.dob,
+        dob: credentials.dob.split("-").reverse().join("-"),
         country: credentials.country,
       
       }),
@@ -35,7 +35,7 @@ const Signup = () => {
     // console.log(json);
     if (json.success) {
       // Save the auth token and redirect
-      alert("By default date of birth is Your Password in reverse order(YY-MM-DD)")
+      alert("By default date of birth is Your Password (DD-MM-YY)")
       navigate("/profile");
       localStorage.setItem("token", json.authtoken);
     } else {
@@ -47,7 +47,6 @@ const Signup = () => {
   };
   return (
     <>
-      <Navbar />
       <section className="h-full my-20 gradient-form md:h-screen">
         <div className="container h-full px-6 py-12">
           <div className="flex flex-wrap items-center justify-center h-full text-gray-800 g-6">
@@ -101,7 +100,7 @@ const Signup = () => {
                             required
                           />
                         </div>
-                        <div className="mb-4">
+                        <div className="mb-2">
                           <input
                             type="date"
                             className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
@@ -114,7 +113,7 @@ const Signup = () => {
                           />
                           <div className="mx-2">Enter Your Date of Birth</div>
                         </div>
-                        <div className="mb-4 ">
+                        <div className="mb-2 ">
                           <select
                             className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                             id="country"
@@ -183,7 +182,6 @@ const Signup = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };

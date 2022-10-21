@@ -213,7 +213,7 @@ router.post('/login', [
 router.post('/getuser', fetchuser,  async (req, res) => {
 
   try {
-    userId = req.user.id;
+    let userId = req.user.id;
     const user = await User.findById(userId).select("-password")
     res.send(user)
   } catch (error) {
@@ -236,14 +236,12 @@ router.post('/updatepassword',
         
         const { registrationNumber, oldPassword, newPassword, confirmNewPassword } = req.body
         if (newPassword !== confirmNewPassword) {
-            errors.confirmNewpassword = 'Password Mismatch'
-            return res.status(400).json(errors);
+            return res.status(400).json({ message: "Password Mismatched" });
         }
         const user = await User.findOne({ registrationNumber })
         const isCorrect = await bcrypt.compare(oldPassword, user.password)
         if (!isCorrect) {
-            errors.oldPassword = 'Invalid old Password';
-            return res.status(404).json(errors);
+            return res.status(404).json({ message: "Password Mismatched" });
         }
         let hashedPassword;
         hashedPassword = await bcrypt.hash(newPassword, 10)

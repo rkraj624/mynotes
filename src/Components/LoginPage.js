@@ -44,7 +44,6 @@ const LoginPage = () => {
   };
   return (
     <>
-      <Navbar />
       <section className="h-full my-24 gradient-form md:h-screen">
         <div className="container h-full px-6 py-12">
           <div className="flex flex-wrap items-center justify-center h-full text-gray-800 g-6">
@@ -130,7 +129,6 @@ const LoginPage = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };

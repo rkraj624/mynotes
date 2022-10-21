@@ -45,7 +45,6 @@ const Profile = () => {
     
      
     <div className="h-screen my-20">
-      <Navbar />
       <div style={{ backgroundImage: `url(${bgc})` }} className="h-full bg-cover">
       
       <div className="flex justify-center py-12 text-3xl font-semibold">
@@ -81,7 +80,6 @@ const Profile = () => {
       </div>
 
       <div className="bottom-0 ">
-        <Footer />
       </div>
     </div>
     

@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <div>
       <div className="fixed top-0 z-10 w-full bg-white border-b border-grey-light">
-        <div className="flex flex-wrap items-center justify-center w-full py-4 mt-0 lg:justify-between">
+        <div className="flex flex-wrap items-center justify-center w-full py-2 mt-0 lg:justify-between">
           <div className="flex items-center px-0 mx-0 lg:pl-4 lg:mx-4">
             <span className="px-8 text-xl font-bold text-purple-800 no-underline hover:no-underline">
               <Link to="/">My Notes</Link>
