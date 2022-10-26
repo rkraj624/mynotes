@@ -109,7 +109,6 @@ const Addnote = (props) => {
       </div>
       </div>
     </section>
-    <Footer/>
     </>
   );
 };
