@@ -1,7 +1,4 @@
 import React, { useState, useEffect,useContext } from "react";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-import loginBg from "../assets/login.jpg";
 import bgc from "../assets/background.jpg";
 import { useNavigate } from "react-router-dom";
 

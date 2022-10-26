@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import loginBg from "../assets/login.jpg";
 import logo from "../assets/logo.jpg";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
 
 const LoginPage = () => {
   let navigation = useNavigate();

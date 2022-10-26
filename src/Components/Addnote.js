@@ -1,5 +1,4 @@
 import React,{useState,useContext} from "react";
-import Footer from "./Footer";
 import Navbar from "./Navbar";
 import logo from "../assets/logo.jpg";
 import noteContext from "../context/notes/noteContext"
