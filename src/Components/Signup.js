@@ -13,8 +13,13 @@ const Signup = () => {
   });
 
   let navigate = useNavigate();
-
+  const [error, setError] = useState(false);
   const signUp = async (e) => {
+    if(!credentials.name || !credentials.email || !credentials.dob || !credentials.country)
+    {
+        setError(true);
+        return false
+    }
     e.preventDefault();
     const response = await fetch("https://rkrajnotes.herokuapp.com/api/auth/createuser", {
       method: "POST",
@@ -41,6 +46,7 @@ const Signup = () => {
     }
   };
   const onChange = (e) => {
+ 
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
   return (
@@ -85,6 +91,7 @@ const Signup = () => {
                               onChange={onChange}
                             required
                           />
+                          { error && !credentials.name  && <span className='text-red-500 invalid-input'>Enter valid name</span>}
                         </div>
                         <div className="mb-4">
                           <input
@@ -97,6 +104,7 @@ const Signup = () => {
                               onChange={onChange}
                             required
                           />
+                          {!credentials.email && <span className='text-red-500 invalid-input'>Enter valid email </span>}
                         </div>
                         <div className="mb-2">
                           <input
@@ -109,6 +117,7 @@ const Signup = () => {
                               onChange={onChange}
                             required
                           />
+                          {!credentials.dob && <span className='text-red-500 invalid-input'>Enter valid DOB</span>}
                           <div className="mx-2">Enter Your Date of Birth</div>
                         </div>
                         <div className="mb-2 ">
@@ -159,6 +168,7 @@ const Signup = () => {
                             <option value="Uttarakhand">Uttarakhand</option>
                             <option value="West Bengal">West Bengal</option>
                           </select>
+                          {!credentials.country && <span className='text-red-500 invalid-input'>Please select Your State</span>}
                         </div>
                         <div className="pt-1 pb-1 mb-12 text-center">
                           <button
