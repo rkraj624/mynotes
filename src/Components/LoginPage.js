@@ -9,7 +9,7 @@ const LoginPage = () => {
     e.preventDefault();
     navigation("/signup");
   };
-
+  const [error, setError] = useState(false);
   const [credentials, setCredentials] = useState({
     registrationNumber: "",
     password: "",
@@ -17,6 +17,11 @@ const LoginPage = () => {
 
   const loginUser = async (e) => {
     e.preventDefault();
+    if(!credentials.registrationNumber || !credentials.password )
+    {
+        setError(true);
+        return false
+    }
     const response = await fetch("https://rkrajnotes.herokuapp.com/api/auth/login", {
       method: "POST",
       headers: {
@@ -80,8 +85,10 @@ const LoginPage = () => {
                             name="registrationNumber"
                             onChange={onChange}
                             value={credentials.registrationNumber}
-                            required
+                            
                           />
+                          { error && !credentials.registrationNumber  && <span className='text-red-500 invalid-input'>Enter valid Registration Number</span>}
+
                         </div>
                         <div className="mb-4">
                           <input
@@ -92,8 +99,10 @@ const LoginPage = () => {
                             name="password"
                             onChange={onChange}
                             value={credentials.password}
-                            required
+                            
                           />
+                          { error && !credentials.password  && <span className='text-red-500 invalid-input'>Enter valid Password </span>}
+                          
                         </div>
                         <div className="pt-1 pb-1 mb-12 text-center">
                           <button

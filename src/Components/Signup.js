@@ -15,12 +15,12 @@ const Signup = () => {
   let navigate = useNavigate();
   const [error, setError] = useState(false);
   const signUp = async (e) => {
+    e.preventDefault();
     if(!credentials.name || !credentials.email || !credentials.dob || !credentials.country)
     {
         setError(true);
         return false
     }
-    e.preventDefault();
     const response = await fetch("https://rkrajnotes.herokuapp.com/api/auth/createuser", {
       method: "POST",
       headers: {
@@ -88,8 +88,7 @@ const Signup = () => {
                             placeholder="Name"
                             name="name"
                             value={credentials.name}
-                              onChange={onChange}
-                            required
+                            onChange={onChange}
                           />
                           { error && !credentials.name  && <span className='text-red-500 invalid-input'>Enter valid name</span>}
                         </div>
@@ -102,9 +101,8 @@ const Signup = () => {
                             name="email"
                             value={credentials.email}
                               onChange={onChange}
-                            required
                           />
-                          {!credentials.email && <span className='text-red-500 invalid-input'>Enter valid email </span>}
+                          {error && !credentials.email && <span className='text-red-500 invalid-input'>Enter valid email </span>}
                         </div>
                         <div className="mb-2">
                           <input
@@ -115,9 +113,8 @@ const Signup = () => {
                             name="dob"
                             value={credentials.dob}
                               onChange={onChange}
-                            required
                           />
-                          {!credentials.dob && <span className='text-red-500 invalid-input'>Enter valid DOB</span>}
+                          {error && !credentials.dob && <span className='text-red-500 invalid-input'>Enter valid DOB</span>}
                           <div className="mx-2">Enter Your Date of Birth</div>
                         </div>
                         <div className="mb-2 ">
@@ -128,7 +125,6 @@ const Signup = () => {
                             name="country"
                             value={credentials.country}
                               onChange={onChange}
-                            required
                           >
                             <option >States</option>
                             <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -168,7 +164,7 @@ const Signup = () => {
                             <option value="Uttarakhand">Uttarakhand</option>
                             <option value="West Bengal">West Bengal</option>
                           </select>
-                          {!credentials.country && <span className='text-red-500 invalid-input'>Please select Your State</span>}
+                          {error && !credentials.country && <span className='text-red-500 invalid-input'>Please select Your State</span>}
                         </div>
                         <div className="pt-1 pb-1 mb-12 text-center">
                           <button
